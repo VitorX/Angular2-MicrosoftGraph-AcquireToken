@@ -15,6 +15,7 @@ import {MicrosoftGraphComponent} from "./components/microsoftGraph.component";
 
 import { AuthHttp, AuthConfig, AUTH_PROVIDERS, provideAuth } from 'angular2-jwt/angular2-jwt';
 import { HttpModule } from '@angular/http';
+import * as request from 'superagent';
 
 @NgModule({
   imports:      [ BrowserModule, routes, HttpModule],

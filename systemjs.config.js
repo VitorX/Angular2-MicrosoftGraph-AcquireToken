@@ -31,8 +31,9 @@
       'rxjs': 'npm:rxjs',
       'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
       "angular2-jwt": "node_modules/angular2-jwt",
+      "superagent":"node_modules/superagent/superagent.js",
       // '@microsoft/microsoft-graph-types': 'npm:@microsoft/microsoft-graph-types',
-      // '@microsoft/microsoft-graph-client':'npm:@microsoft/microsoft-graph-client/lib/graph-js-sdk-web.js',
+      '@microsoft/microsoft-graph-client':'npm:@microsoft/microsoft-graph-client/lib/graph-js-sdk-web.js',
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {

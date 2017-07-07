@@ -25,6 +25,7 @@
     "@angular/platform-browser": "~2.4.0",
     "@angular/platform-browser-dynamic": "~2.4.0",
     "@angular/router": "~3.4.0",
+    "@types/superagent": "^3.5.2",
     "angular-in-memory-web-api": "~0.2.2",
     "angular2-adal": "^0.1.4",
     "core-js": "^2.4.1",
@@ -53,6 +54,7 @@
     "lodash": "^4.16.4",
     "protractor": "~4.0.14",
     "rimraf": "^2.5.4",
+    "superagent": "^3.5.2",
     "tslint": "^3.15.1",
     "typescript": "^2.2.2"
   },
