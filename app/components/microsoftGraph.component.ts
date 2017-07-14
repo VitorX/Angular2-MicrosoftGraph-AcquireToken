@@ -11,25 +11,26 @@ import {SecretService} from '../services/secret.service';
 
 @Component({
     selector: 'MicrosoftGraph',
-    template: `<button (click)="getProfile()">Get profile using Microsoft Graph</button>`
+    template: `<button (click)="getProfile()">Get profile using Microsoft Graph</button>
+    <span *ngIf="user">Hi,{{user.displayName}}<span>
+    
+    `
 })
 export class MicrosoftGraphComponent {
     
-    private userProfile: any;
+    user:MicrosoftGraph.User={displayName:"aaa"};
 
     constructor(
         private adalService: AdalService,
         private secretService: SecretService,
         private http1: AuthHttp) {
         adalService.init(secretService.adalConfig);
-
         }
 
-
    public getProfile(){
-       this.adalService.acquireToken("https://graph.microsoft.com").subscribe(function(token){
+    console.log(this.user);
+       this.adalService.acquireToken("https://graph.microsoft.com").subscribe((token) => {
         console.log(token)
-
         request
             .get("https://graph.microsoft.com/v1.0/me")
             .set('Authorization', 'Bearer ' + token)
@@ -38,9 +39,8 @@ export class MicrosoftGraphComponent {
                     console.error(err)
                     return;
                 }
-                let user:[MicrosoftGraph.User] = res.body;
-                  console.log(user);
-
+                this.user= res.body;
+                console.log(this.user);
             })
        })
   }
